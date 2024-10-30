@@ -25,9 +25,10 @@ html {
 }
 
 a {
-    color:  inherit;
+    color: inherit;
     text-decoration: inherit;
 }
+
 *,
 *::after,
 *::before {
@@ -41,7 +42,7 @@ body {
     background-color: #F8F8F8;
 }
 
-.sidebar {
+.aside {
     display: flex;
     flex-direction: column;
     width: 320px;
@@ -56,13 +57,18 @@ body {
     border-radius: 50%;
     border: none;
 }
+
 .action-button:hover,
-.nav-sidebar__list-item:hover,
+.nav-aside__list-item:hover,
 .email__button:hover,
 .phone__button:hover,
 .language__button:hover {
     opacity: 0.7;
     cursor: pointer;
+    transition-duration: 2s;
+}
+.action-button:hover {
+    scale: 1.2;
 }
 
 .icon::before {
@@ -123,7 +129,7 @@ body {
     left: 10px;
 }
 
-.header-sidebar__content {
+.header-aside__content {
     display: flex;
     padding-top: 18px;
     padding-left: 24px;
@@ -133,27 +139,33 @@ body {
     margin-bottom: 46px;
 }
 
-.header-sidebar__content .action-button:last-child {
+.header-aside__content .action-button:last-child {
     margin-left: auto;
 }
+
 .main {
     padding-left: 24px;
 }
-.nav-sidebar {
+
+.nav-aside {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 22px;
 }
-.nav-sidebar__list-item{
+
+.nav-aside__list-item {
     position: relative;
+    padding: 10px;
 }
-.nav-sidebar__list-item--active {
+
+.nav-aside__list-item--active {
     color: #7E7E82;
 }
-.nav-sidebar__list-item--active::after {
+
+.nav-aside__list-item--active::after {
     content: '';
     position: absolute;
-    top: -10px;
+    top: 0px;
     left: -28px;
     width: 8px;
     height: 32px;
@@ -161,26 +173,26 @@ body {
     border-radius: 8px;
 }
 
-.footer-sidebar {
+.footer-aside {
     margin-top: auto;
     padding-left: 24px;
 }
 
-.footer-sidebar__action-button {
+.footer-aside__action-button {
     display: flex;
     gap: 16px;
     margin-bottom: 16px;
 }
 
 .email {
-    font-family:  "TT Lakes-Regular";
+    font-family: "TT Lakes-Regular";
     color: inherit;
     margin-bottom: 12px;
     font-weight: bold;
 }
 
 .phone {
-    font-family:    "TT Lakes-Bold";
+    font-family: "TT Lakes-Bold";
     margin-bottom: 40px;
     font-size: 24px;
 }
@@ -192,12 +204,13 @@ body {
 }
 
 .language__button {
-    font-family:    "TT Lakes-Regular";
+    font-family: "TT Lakes-Regular";
     border: none;
-    background:  transparent;
+    background: transparent;
     font-size: 16px;
     padding: 0;
 }
+
 .language__button--active {
     color: #7E7E82;
 }
